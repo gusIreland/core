@@ -152,7 +152,8 @@ public abstract class GtfsRtVehiclePositionsReaderBase {
 		    // Handle speed and heading
 		    float speed = Float.NaN;
 		    if (position.hasSpeed()) {
-		    	speed = position.getSpeed();
+			    // TODO: goodluck hack
+		    	speed = position.getSpeed() * 0.44704f;
 		    }
 		    float heading = Float.NaN;
 		    if (position.hasBearing()) {
